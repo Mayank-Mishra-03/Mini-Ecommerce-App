@@ -28,7 +28,75 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: MyBottomNavBar(
         onTabChange: (index) => navigationBottomBar(index),
       ),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: Builder(
+          builder: (context) {
+            return IconButton(
+              onPressed: () {
+                Scaffold.of(context).openDrawer();
+              },
+              icon: Icon(Icons.menu),
+            );
+          },
+        ),
+      ),
+      drawer: _drawer(),
       body: _pages[_selectedIndex],
+    );
+  }
+
+  Drawer _drawer() {
+    return Drawer(
+      backgroundColor: Colors.grey[900],
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Column(
+            children: [
+              DrawerHeader(
+                child: Image.asset("assets/nike.png", color: Colors.white),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: ListTile(
+                  leading: Icon(Icons.home, color: Colors.white, size: 30),
+                  title: Text(
+                    "Home",
+                    style: TextStyle(color: Colors.grey[300], fontSize: 20),
+                  ),
+                  onTap: () {},
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0),
+                child: ListTile(
+                  leading: Icon(Icons.info, color: Colors.white, size: 30),
+                  title: Text(
+                    "About",
+                    style: TextStyle(color: Colors.grey[300], fontSize: 20),
+                  ),
+                  onTap: () {},
+                ),
+              ),
+            ],
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20.0, bottom: 25),
+            child: ListTile(
+              leading: Icon(Icons.logout, color: Colors.white, size: 30),
+              title: Text(
+                "Logout",
+                style: TextStyle(color: Colors.grey[300], fontSize: 20),
+              ),
+              onTap: () {},
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
