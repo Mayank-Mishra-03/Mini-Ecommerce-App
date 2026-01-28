@@ -71,7 +71,8 @@ class ShopPage extends StatelessWidget {
         ),
 
         //list of shoes
-        Expanded(
+        SizedBox(
+          height: 450,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             // when you use Axis.horizontal, your flutter child must have width property

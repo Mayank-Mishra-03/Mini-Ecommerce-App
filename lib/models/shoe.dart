@@ -14,27 +14,27 @@ class Shoe {
   static List<Shoe> getShoeData() {
     List<Shoe> shoeData = [
       Shoe(
-        name: "Air Jordane",
+        name: "Air Jordan",
         price: "\$150",
         description: "Cool shoe",
         imagePath: "assets/air_jordan1.jpg",
       ),
       Shoe(
-        name: "Nike overload",
-        price: "\$150",
-        description: "Cool shoe",
+        name: "Overload",
+        price: "\$200",
+        description: "Unleash the Beast",
         imagePath: "assets/shoes2.avif",
       ),
       Shoe(
-        name: "Air Jordane",
-        price: "\$150",
-        description: "Cool shoe",
+        name: "Canvas",
+        price: "\$180",
+        description: "Modern ware",
         imagePath: "assets/shoes3.avif",
       ),
       Shoe(
-        name: "Air Jordane",
-        price: "\$150",
-        description: "Cool shoe",
+        name: "Refactor",
+        price: "\$170",
+        description: "Funky style",
         imagePath: "assets/shoes3.webp",
       ),
     ];
