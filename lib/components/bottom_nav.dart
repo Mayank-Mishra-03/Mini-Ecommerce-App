@@ -11,7 +11,7 @@ class MyBottomNavBar extends StatelessWidget {
     return Container(
       padding: EdgeInsetsGeometry.symmetric(vertical: 20),
       child: GNav(
-        padding: EdgeInsetsGeometry.all(20),
+        padding: EdgeInsetsGeometry.all(15),
         color: Colors.grey[400],
         activeColor: Colors.grey.shade700,
         tabBackgroundColor: Colors.grey[200]!,
@@ -23,7 +23,7 @@ class MyBottomNavBar extends StatelessWidget {
         tabs: [
           GButton(
             icon: Icons.home,
-            text: 'Home',
+            text: 'Shop',
             textStyle: TextStyle(fontSize: 16),
           ),
           GButton(
